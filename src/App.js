@@ -1,6 +1,6 @@
 import {Main} from './styles/main';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Category from "./pages/category";
+import Categories from "./pages/categories";
 import "./index.css"
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
             <Main/>
             <BrowserRouter>
                 <Routes>
-                    <Route path="category" element={<Category/>}/>
+                    <Route path="category" element={<Categories/>}/>
                 </Routes>
             </BrowserRouter>
         </>

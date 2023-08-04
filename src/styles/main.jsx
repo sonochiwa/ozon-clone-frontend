@@ -6,6 +6,15 @@ export const Main = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
+  :root {
+    /* Accent Color */
+    --primary_blue: #005BFF;
+    
+    /* Typography */
+    --text_light: #707F8D;
+    --text_dark: #001a34;
+  }
 `;
 export const Container = styled.div`
   width: 100%;

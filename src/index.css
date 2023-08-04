@@ -1,6 +1,13 @@
 @font-face {
     font-family: "GT Eesti Pro";
-    src: url("fonts/GTEestiProDisplay-Bold.woff2") format("woff2");
+    src: url("fonts/gteestiprodisplay_bold.otf") format("opentype");
     font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GT Eesti Pro";
+    src: url("fonts/gteestiprodisplay_regular.otf") format("opentype");
+    font-weight: 400;
     font-style: normal;
 }
