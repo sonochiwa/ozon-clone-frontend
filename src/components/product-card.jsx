@@ -1,16 +1,18 @@
 import styled from "styled-components";
-import MyImage from "./elektronika.webp";
+import EmptyCard from "../images/empty-card.png";
 
-function ProductCard({name, link, image}) {
+function ProductCard({name, image_id}) {
+
     return (
-        <Root href={'#' + name}>
-            <Image src={MyImage}/>
+        <Root href={`#${name}`}>
+            <Image src={image_id ? `http://0.0.0.0:8000/api/images/${image_id}` : EmptyCard}/>
             <Name>{name}</Name>
         </Root>
     )
 }
 
 const Root = styled.a`
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 216px;
@@ -20,11 +22,12 @@ const Root = styled.a`
 const Image = styled.img`
   width: 100%;
   height: 216px;
-  border-radius: 12px;
   margin-bottom: 8px;
+  border-radius: 12px;
 
   &:hover {
-    background-color: rgba(154, 190, 232, 0.29);
+    outline: 1px solid #c3d7eb;
+
   }
 `;
 

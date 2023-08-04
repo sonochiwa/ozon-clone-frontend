@@ -1,8 +1,8 @@
 import {Container, HeaderH1} from "../styles/main";
-import ProductCard from "../components/product-card";
 import {useEffect, useState} from "react";
 import endpoints from "../services/endpoints";
 import styled from "styled-components";
+import ProductCard from "../components/product-card";
 
 function Categories() {
     const [categories, setCategories] = useState(null);
@@ -16,7 +16,12 @@ function Categories() {
         <Container>
             <HeaderH1>Каталог</HeaderH1>
             <ProductCardWrapper>
-                {categories && categories.map((data, i) => <ProductCard key={i} name={data.name}/>)}
+                {categories && categories.map((data, i) =>
+                    <ProductCard key={i}
+                                 name={data.name}
+                                 image_id={data.image_id}
+                    />)
+                }
             </ProductCardWrapper>
         </Container>
     );
