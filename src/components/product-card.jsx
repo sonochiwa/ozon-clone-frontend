@@ -24,10 +24,11 @@ const Image = styled.img`
   height: 216px;
   margin-bottom: 8px;
   border-radius: 12px;
+  transition: .1s ease-in;
+  
 
   &:hover {
-    outline: 1px solid #c3d7eb;
-
+    scale: 1.05;
   }
 `;
 
