@@ -1,22 +1,26 @@
 import styled from "styled-components";
 import EmptyCard from "../images/empty-card.png";
+import {useNavigate} from "react-router-dom";
 
 function ProductCard({name, image_id}) {
+    const navigate = useNavigate();
 
     return (
-        <Root href={`#${name}`}>
+        <Root onClick={() => navigate('/categories')}>
             <Image src={image_id ? `http://0.0.0.0:8000/api/images/${image_id}` : EmptyCard}/>
             <Name>{name}</Name>
         </Root>
     )
 }
 
-const Root = styled.a`
+
+
+const Root = styled.div`
   position: relative;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 216px;
-  text-decoration: none;
 `;
 
 const Image = styled.img`

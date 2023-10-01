@@ -33,4 +33,5 @@ const ProductCardWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   row-gap: 48px;
+  column-gap: 24px;
 `;
